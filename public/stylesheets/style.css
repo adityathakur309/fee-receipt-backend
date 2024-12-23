@@ -1,0 +1,265 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Container */
+.fee-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Left Side Inputs */
+.left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.left label,
+.right label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.left input,
+.right input,
+.right select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Right Side Inputs */
+.right {
+    flex: 1;
+    min-width: 250px;
+}
+
+
+  /* Container for the receipt */
+  .receipt-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Section */
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .receipt-header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .receipt-date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* General Styling */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f9fafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the receipt */
+.receipt-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header styling */
+.receipt-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receipt-header h1 {
+  font-size: 28px;
+  color: #333333;
+  margin: 0;
+}
+
+.receipt-header .receipt-date {
+  font-size: 16px;
+  color: #555555;
+  margin-top: 5px;
+}
+
+/* Table styling */
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.receipt-table th,
+.receipt-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.receipt-table th {
+  background-color: #e7750b;
+  color: #141010;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.receipt-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.receipt-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.receipt-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.receipt-table tbody tr:hover {
+  background-color: #eafaf1;
+}
+
+.receipt-table td {
+  color: #333333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .receipt-container {
+    padding: 15px;
+  }
+
+  .receipt-header h1 {
+    font-size: 22px;
+  }
+
+  .receipt-table th,
+  .receipt-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: #ffffff;
+    margin: 0;
+  }
+
+  .receipt-container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  tablereceipt-table{
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  .receipt-table th {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+  }
+
+  .receipt-table tr:hover {
+    background-color: #ffffff !important;
+  }
+}
+
+table .field{
+  font-size: 1.3rem;
+   font-weight: 600;
+}
+  td.detail{
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .fee-form {
+        padding: 15px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
