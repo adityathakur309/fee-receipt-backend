@@ -45,6 +45,7 @@ const isLoggedIn = async (req, res, next) => {
         if (!token) {
             token = jwt.sign({ name }, process.env.JWT_SECRET);
             res.cookie("token", token, { httpOnly: true });
+            req.token = token;
         } else {
             // Verify the token if it already exists
             try {
@@ -73,8 +74,8 @@ app.get("/", async (req, res) => {
             return res.send("User already exists in the database.");
         }
         const user = await userModel.create({
-            name: "netcoder@2024",
-            password: "netcoder@309"
+            name: process.env.NAME,
+            password: process.env.PASSWORD
         });
         const token = jwt.sign({ name: user.name }, process.env.JWT_SECRET, {
             expiresIn: "12h",
@@ -101,6 +102,7 @@ app.post("/users/login", isLoggedIn, (req, res) => {
     res.json({
         success: true,
         message: "you can generate and find receipt",
+        token:req.token ||""
     })
 })
 
@@ -111,7 +113,8 @@ app.get("/logout", (req, res) => {
         res.cookie("token", "", { maxAge: 0, httpOnly: true, secure: true });
         res.json({
             success: true,
-            message: "your account has been logged out"
+            message: "your account has been logged out",
+            token:"",
         })
     }
 
